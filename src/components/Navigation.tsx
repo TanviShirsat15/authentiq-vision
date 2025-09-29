@@ -9,11 +9,11 @@ export const Navigation: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-black/10 border-b border-white/10">
+    <nav className="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-white/80 border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-white hover:text-white/80 transition-colors">
+          <Link to="/" className="text-2xl font-bold text-foreground hover:text-muted-foreground transition-colors">
             AuthentiQ
           </Link>
 
@@ -22,8 +22,8 @@ export const Navigation: React.FC = () => {
             <Link 
               to="/" 
               className={cn(
-                "text-white/90 hover:text-white transition-colors",
-                isActive('/') && "text-white font-medium"
+                "text-muted-foreground hover:text-foreground transition-colors",
+                isActive('/') && "text-foreground font-medium"
               )}
             >
               Home
@@ -31,8 +31,8 @@ export const Navigation: React.FC = () => {
             <Link 
               to="/about" 
               className={cn(
-                "text-white/90 hover:text-white transition-colors",
-                isActive('/about') && "text-white font-medium"
+                "text-muted-foreground hover:text-foreground transition-colors",
+                isActive('/about') && "text-foreground font-medium"
               )}
             >
               About Us
@@ -40,8 +40,8 @@ export const Navigation: React.FC = () => {
             <Link 
               to="/contact" 
               className={cn(
-                "text-white/90 hover:text-white transition-colors",
-                isActive('/contact') && "text-white font-medium"
+                "text-muted-foreground hover:text-foreground transition-colors",
+                isActive('/contact') && "text-foreground font-medium"
               )}
             >
               Contact Us
@@ -49,8 +49,8 @@ export const Navigation: React.FC = () => {
             <Link 
               to="/how-it-works" 
               className={cn(
-                "text-white/90 hover:text-white transition-colors",
-                isActive('/how-it-works') && "text-white font-medium"
+                "text-muted-foreground hover:text-foreground transition-colors",
+                isActive('/how-it-works') && "text-foreground font-medium"
               )}
             >
               How It Works
@@ -67,7 +67,7 @@ export const Navigation: React.FC = () => {
           </CustomButton>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden text-white">
+          <button className="md:hidden text-foreground">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>

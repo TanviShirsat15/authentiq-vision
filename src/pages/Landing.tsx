@@ -74,7 +74,7 @@ const Landing: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#1A1D2B] to-[#0F1419]">
+    <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
@@ -89,7 +89,7 @@ const Landing: React.FC = () => {
           }}
         />
         <div 
-          className="absolute inset-0 opacity-10 flex items-center justify-center"
+          className="absolute inset-0 opacity-30 flex items-center justify-center"
           style={{
             backgroundImage: `url(${jharkhandMap})`,
             backgroundSize: '50%',
@@ -99,7 +99,7 @@ const Landing: React.FC = () => {
         />
         
         {/* Circuit Animation Overlay */}
-        <div className="absolute inset-0 circuit-bg opacity-30" />
+        <div className="absolute inset-0 circuit-bg opacity-20" />
         
         {/* Hero Content */}
         <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
@@ -109,11 +109,11 @@ const Landing: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="mb-8"
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
               AuthentiQ - {' '}
               <RotatingText 
                 texts={rotatingTexts}
-                className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300"
+                className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-muted-foreground"
               />
             </h1>
           </motion.div>
@@ -122,7 +122,7 @@ const Landing: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed"
           >
             The future of document verification is here. Powered by AI and secured by blockchain technology.
           </motion.p>
@@ -153,7 +153,7 @@ const Landing: React.FC = () => {
           transition={{ delay: 2, duration: 1 }}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         >
-          <ChevronDown className="w-8 h-8 text-white/60 animate-bounce" />
+          <ChevronDown className="w-8 h-8 text-muted-foreground animate-bounce" />
         </motion.div>
       </section>
 
@@ -170,10 +170,10 @@ const Landing: React.FC = () => {
             <FeatureBadge className="mb-6 inline-block">
               Features of our website
             </FeatureBadge>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Cutting-Edge Technology
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Experience the power of next-generation document verification with our advanced AI and blockchain infrastructure.
             </p>
           </motion.div>
@@ -188,8 +188,8 @@ const Landing: React.FC = () => {
                 viewport={{ once: true }}
                 className="card-authentiq"
               >
-                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                <h3 className="text-2xl font-bold text-foreground mb-4">{feature.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -197,7 +197,7 @@ const Landing: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-6 bg-black/20">
+      <section className="py-20 px-6 bg-accent/20">
         <div className="container mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -206,7 +206,7 @@ const Landing: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Trusted by Industry Leaders
             </h2>
           </motion.div>
@@ -221,10 +221,10 @@ const Landing: React.FC = () => {
                 viewport={{ once: true }}
                 className="card-authentiq text-center"
               >
-                <p className="text-gray-300 mb-6 italic">"{testimonial.text}"</p>
+                <p className="text-muted-foreground mb-6 italic">"{testimonial.text}"</p>
                 <div>
-                  <h4 className="text-white font-semibold">{testimonial.name}</h4>
-                  <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                  <h4 className="text-foreground font-semibold">{testimonial.name}</h4>
+                  <p className="text-muted-foreground text-sm">{testimonial.role}</p>
                 </div>
               </motion.div>
             ))}
@@ -242,7 +242,7 @@ const Landing: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Frequently Asked Questions
             </h2>
           </motion.div>
@@ -257,10 +257,10 @@ const Landing: React.FC = () => {
                 viewport={{ once: true }}
                 className="card-authentiq group"
               >
-                <summary className="cursor-pointer text-white font-semibold text-lg py-2">
+                <summary className="cursor-pointer text-foreground font-semibold text-lg py-2">
                   {faq.question}
                 </summary>
-                <p className="text-gray-300 mt-4 leading-relaxed">{faq.answer}</p>
+                <p className="text-muted-foreground mt-4 leading-relaxed">{faq.answer}</p>
               </motion.details>
             ))}
           </div>
@@ -268,34 +268,34 @@ const Landing: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black/40 py-12 px-6 border-t border-white/10">
+      <footer className="bg-muted py-12 px-6 border-t border-border">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-4">AuthentiQ</h3>
-              <p className="text-gray-300">
+              <h3 className="text-2xl font-bold text-foreground mb-4">AuthentiQ</h3>
+              <p className="text-muted-foreground">
                 Revolutionizing document verification with AI and blockchain technology.
               </p>
             </div>
             <div>
-              <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+              <h4 className="text-lg font-semibold text-foreground mb-4">Quick Links</h4>
               <div className="space-y-2">
-                <Link to="/about" className="block text-gray-300 hover:text-white transition-colors">About Us</Link>
-                <Link to="/contact" className="block text-gray-300 hover:text-white transition-colors">Contact Us</Link>
-                <Link to="/how-it-works" className="block text-gray-300 hover:text-white transition-colors">How It Works</Link>
+                <Link to="/about" className="block text-muted-foreground hover:text-foreground transition-colors">About Us</Link>
+                <Link to="/contact" className="block text-muted-foreground hover:text-foreground transition-colors">Contact Us</Link>
+                <Link to="/how-it-works" className="block text-muted-foreground hover:text-foreground transition-colors">How It Works</Link>
               </div>
             </div>
             <div>
-              <h4 className="text-lg font-semibold text-white mb-4">Get Started</h4>
+              <h4 className="text-lg font-semibold text-foreground mb-4">Get Started</h4>
               <div className="space-y-2">
-                <Link to="/institution/login" className="block text-gray-300 hover:text-white transition-colors">Institution Portal</Link>
-                <Link to="/verifier/login" className="block text-gray-300 hover:text-white transition-colors">Verifier Portal</Link>
-                <Link to="/admin/login" className="block text-gray-300 hover:text-white transition-colors">Admin Portal</Link>
+                <Link to="/institution/login" className="block text-muted-foreground hover:text-foreground transition-colors">Institution Portal</Link>
+                <Link to="/verifier/login" className="block text-muted-foreground hover:text-foreground transition-colors">Verifier Portal</Link>
+                <Link to="/admin/login" className="block text-muted-foreground hover:text-foreground transition-colors">Admin Portal</Link>
               </div>
             </div>
           </div>
-          <div className="border-t border-white/10 mt-8 pt-8 text-center">
-            <p className="text-gray-400">© AuthentiQ 2025. All rights reserved.</p>
+          <div className="border-t border-border mt-8 pt-8 text-center">
+            <p className="text-muted-foreground">© AuthentiQ 2025. All rights reserved.</p>
           </div>
         </div>
       </footer>

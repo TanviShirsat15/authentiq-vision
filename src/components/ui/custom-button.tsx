@@ -31,7 +31,7 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
   if (variant === 'glass') {
     return (
       <button 
-        className={cn("btn-glass px-6 py-3 rounded-lg font-semibold text-white transition-all", className)} 
+        className={cn("btn-glass px-6 py-3 rounded-lg font-semibold text-foreground transition-all", className)} 
         {...props}
       >
         {children}
